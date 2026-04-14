@@ -16,11 +16,23 @@ namespace screenAverage {
      */
     //% block="set camera offset x $x y $y"
     //% group="Offset"
-    //% x.defl=0
+    //% x.defl=0Is
     //% y.defl=0
     export function setCameraOffset(x: number, y: number) {
         _offsetX = x
         _offsetY = y
+    }
+
+    /**
+     * Changes the camera offset by the given x and y amounts.
+     */
+    //% block="change camera offset by x $x y $y"
+    //% group="Offset"
+    //% x.defl=0
+    //% y.defl=0
+    export function changeCameraOffset(x: number, y: number) {
+        _offsetX += x
+        _offsetY += y
     }
 
     /**
@@ -258,4 +270,3 @@ namespace screenAverage {
         return (mySprite.y + mySprite2.y + mySprite3.y + mySprite4.y + mySprite5.y + mySprite6.y) / 6
     }
 }
-
